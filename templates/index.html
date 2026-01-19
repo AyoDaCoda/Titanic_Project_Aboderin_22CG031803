@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Titanic Survival Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Titanic Survival Prediction</h2>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label>Passenger Class (1, 2, or 3):</label>
+                <select name="Pclass" required>
+                    <option value="1">1st Class</option>
+                    <option value="2">2nd Class</option>
+                    <option value="3">3rd Class</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Sex:</label>
+                <select name="Sex" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Age:</label>
+                <input type="number" name="Age" step="0.1" required placeholder="e.g. 22">
+            </div>
+            <div class="form-group">
+                <label>Siblings/Spouses Aboard:</label>
+                <input type="number" name="SibSp" required placeholder="e.g. 1">
+            </div>
+            <div class="form-group">
+                <label>Fare Paid:</label>
+                <input type="number" name="Fare" step="0.01" required placeholder="e.g. 7.25">
+            </div>
+            <button type="submit">Check Survival Status</button>
+        </form>
+
+        {% if prediction_text %}
+        <div class="result">
+            Result: {{ prediction_text }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
