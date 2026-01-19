@@ -2,5 +2,5 @@ Name: Aboderin Ayomide Motunrayo
 Matric Number: 22CG031803
 Machine Learning Algorithm Used: Random Forest Classifier
 Model persistence method used: Joblib
-Live URL of the hosted application: [Paste Render Link Here Later]
-GitHub repository link: [Paste GitHub Link Here Later]
+Live URL of the hosted application: https://titanic-predictor-aboderin.onrender.com
+GitHub repository link: https://github.com/AyoDaCoda/Titanic_Project_Aboderin_22CG031803
